@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-##############################################################################
 #
-#    Copyright (C) 2014 Agile Business Group sagl (<http://www.agilebg.com>)
+#    Author: Yannick Vaucher
+#    Copyright 2015 Camptocamp SA
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -16,6 +16,13 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-##############################################################################
+from openerp import models, api
 
-from . import stock_partial_picking
+
+class PurchaseOrder(models.Model):
+    _inherit = 'purchase.order'
+
+    @api.multi
+    def wkf_confirm_order(self):
+        po = self.with_context(no_invoice_policy_check=True)
+        super(PurchaseOrder, po).wkf_confirm_order()

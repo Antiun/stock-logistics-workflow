@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-#    Author: Leonardo Pistone
-#    Copyright 2015 Camptocamp SA
+##############################################################################
+#
+#    Copyright (C) 2014-15 Agile Business Group sagl (<http://www.agilebg.com>)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -14,20 +15,7 @@
 #
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-{'name': 'Stock Dropshipping Dual Invoice',
- 'summary':
- 'Create both Supplier and Customer Invoices from a Dropshipping Delivery',
- 'version': '0.1',
- 'author': "Camptocamp,Odoo Community Association (OCA)",
- 'category': 'Warehouse',
- 'license': 'AGPL-3',
- 'depends': ['stock_account',
-             'sale_stock',
-             'stock_dropshipping'],
- 'data': [
-     'wizard/stock_invoice_onshipping_view.xml',
-     'security/group.xml',
- ],
- 'auto_install': False,
- 'installable': True,
- }
+#
+##############################################################################
+
+from . import wizard

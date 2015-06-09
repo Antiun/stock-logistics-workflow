@@ -1,3 +1,6 @@
+.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
+    :alt: License: AGPL-3
+
 Stock Dropshipping Dual Invoice
 ===============================
 
@@ -31,9 +34,11 @@ Usage
 Known issues
 ------------
 
-* When the wizard creates a supplier invoice and a customer invoice, the
-  returned view doesn't allow to show invoices in form view, because the form
-  wouldn't be correctly displayed.
+When the wizard creates a supplier invoice and a customer invoice, it does not
+show them, and instead the wizard is simply closed, going back to the picking.
+This is because we cannot easily show a customer and a supplier invoice
+together in a tree view, because one of them would not get the correct form
+view.
 
 
 Bug Tracker
@@ -52,6 +57,7 @@ Contributors
 ------------
 
 * Leonardo Pistone <leonardo.pistone@camptocamp.com>
+* Pedro M. Baeza <pedro.baeza@gmail.com>
 
 Maintainer
 ----------
